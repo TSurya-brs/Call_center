@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Cloud Example</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            /* background-color:white; */
+        }
+        #wordCloud {
+            /* border:solid; */
+            width: 80%;
+            height: 80%;
+        }
+    </style>
+</head>
+<body>
+    <div id="wordCloud"></div>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.min.js"></script>
+    <script>
+        const countries = [
+            {text: "India", size: 40}, {text: "Australia", size: 30}, {text: "Canada", size: 35},
+            {text: "Brazil", size: 25}, {text: "Germany", size: 20}, {text: "Japan", size: 30},
+            {text: "France", size: 25},{text: "Pakistan", size: 30}, {text: "China", size: 35}, {text: "Russia", size: 20},
+            {text: "South Africa", size: 25}, {text: "United States", size: 40}, {text: "United Kingdom", size: 30},
+            {text: "Italy", size: 20}, {text: "Spain", size: 25}, {text: "Mexico", size: 20},
+            {text: "Argentina", size: 25}, {text: "North Korea", size: 30},{text: "South Korea", size: 30}, 
+            {text: "New Zealand", size: 20},{text: "Sweden", size: 20}, {text: "Norway", size: 20}
+        ];
+
+        const width = document.getElementById('wordCloud').offsetWidth;
+        const height = document.getElementById('wordCloud').offsetHeight;
+
+        const layout = d3.layout.cloud()
+            .size([width, height])
+            .words(countries)
+            .padding(5)
+            .rotate(() => ~~(Math.random() * 2) * 90)
+            .font("Impact")
+            .fontSize(d => d.size)
+            .on("end", draw);
+
+        layout.start();
+
+        function draw(words) {
+            d3.select("#wordCloud").append("svg")
+                .attr("width", layout.size()[0])
+                .attr("height", layout.size()[1])
+                .append("g")
+                .attr("transform", "translate(" + layout.size()[0] / 2 + "," + layout.size()[1] / 2 + ")")
+                .selectAll("text")
+                .data(words)
+                .enter().append("text")
+                .style("font-size", d => d.size + "px")
+                .style("font-family", "Impact")
+                .style("fill", (d, i) => d3.schemeCategory10[i % 10])
+                .attr("text-anchor", "middle")
+                .attr("transform", d => "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")")
+                .text(d => d.text);
+        }
+    </script>
+</body>
+</html>

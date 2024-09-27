@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Center</title>
+
+    <!-- css  -->
+     <link rel="stylesheet" href="assets/css/style.css">
+     <link rel="stylesheet" href="assets/css/style1.css">
+     <link rel="stylesheet" href="assets/css/style2.css">
+
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+     
+
+</head>
+<body>
+    <div class="container1">
+
+        <!-- header  -->
+        <div class="header">
+            <div class="leftheader">
+                <h2 style="color:black">Call Center</h2>
+                
+            </div>
+        </div>
+
+        <!-- section  -->
+         <div class="middle">
+
+            <div class="leftmid">
+                <a href="index.html">Dashboard</a>
+                <a href="service.html">Source</a>
+            </div>
+
+
+            <div class="rightmid">
+                <div> <h1 style="color: black;">Dashboard</h1> </div>
+
+                <!-- cards  -->
+                <div class="cards">
+                    <div class="card" style="background-color: rgb(103, 24, 230);">
+                        <h3>Service Requests Approved</h3>
+                        <p>0</p>
+                    </div>
+                    <div class="card" style="background-color: rgb(230, 92, 92);">
+                        <h3>Service Requests Pending</h3>
+                        <p>0</p>
+                    </div>
+                    <div class="card" style="background-color: rgb(121, 223, 90);">
+                        <h3>Service Requests Open</h3>
+                        <p>0</p>
+                    </div>
+                    <div class="card" style="background-color: rgb(231, 59, 140);">
+                        <h3>Service Requests Resolved</h3>
+                        <p>0</p>
+                    </div>
+                </div>
+
+
+                 <!-- Graphs  -->
+                <div class="graph">
+                    <div class="areachart">
+                        <div> <h3>Area chart example</h3> </div>
+                        <hr>
+                        <div class="diagram">
+                            <canvas id="areaChart" width="300" height="150"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="barchart">
+                        <div> <h3>Bar chart example</h3> </div>
+                        <hr>
+                        <div class="diagram">
+                            <canvas id="barChart" width="300" height="150"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--Word Cloud - Our customers around the world-->
+                <div class = "countries">
+                    <h3 style="text-align:center"> Word Cloud - Our customers around the world</h3>
+                    <hr>
+                    <iframe src="wordCloud.html" width="100%" height="400" frameborder="0"></iframe>
+                    
+                </div>
+
+
+
+                <div class="workflow">
+                    <h2>Timeline - Service Request Workflow Process</h2>
+                    <hr>
+        
+                    <div class="timeline">
+                        <!-- Step 1 -->
+                        <div class="timeline-item left">
+                            <div class="content">
+                                <h3>Step 1: Planning & Requirement Gathering</h3>
+                                <p>Identify project objectives, gather requirements, and allocate resources.</p>
+                            </div>
+                        </div>
+        
+                        <!-- Step 2 -->
+                        <div class="timeline-item right">
+                            <div class="content">
+                                <h3>Step 2: Design</h3>
+                                <p>Develop initial designs and wireframes for project layout.</p>
+                            </div>
+                        </div>
+        
+                        <!-- Step 3 -->
+                        <div class="timeline-item left">
+                            <div class="content">
+                                <h3>Step 3: Development</h3>
+                                <p>Build the core features and functionality of the project.</p>
+                            </div>
+                        </div>
+        
+                        <!-- Step 4 -->
+                        <div class="timeline-item right">
+                            <div class="content">
+                                <h3>Step 4: Testing</h3>
+                                <p>Test the project across different platforms and fix any bugs.</p>
+                            </div>
+                        </div>
+        
+                        <!-- Step 5 -->
+                        <div class="timeline-item left">
+                            <div class="content">
+                                <h3>Step 5: Review & Improvements</h3>
+                                <p>Review the project and implement necessary improvements.</p>
+                            </div>
+                        </div>
+        
+                        <!-- Step 6 -->
+                        <div class="timeline-item right">
+                            <div class="content">
+                                <h3>Step 6: Deployment</h3>
+                                <p>Deploy the final product to the live environment.</p>
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="copyrights"></div>
+            </div>
+         </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script1.js"></script>
+    <script src="assets/js/script2.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Service Request</title>
+    <link rel="stylesheet" href="assets/css/style2.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="header" id="id1">
+        <div class="leftheader">
+            <h2 style="color:black">Call Center</h2>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- section  -->
+     <div class="middle" id="id2">
+
+        <div class="leftmid">
+            <a href="index.html">Dashboard</a>
+            <a href="service.html">Source</a>
+        </div>
+   
+    <div class="content" id="id3">
+         <h1>Create Service Request</h1>
+         <div class="form-container" style="margin-left:10%;">
+            <!-- Step Navigation -->
+            <div class="form-navigation">
+                <div>
+                    <button class="step-button active" id="button1" onclick="goToStep(1)">1</button>
+                    <p class="step-label">Service Details</p>
+                </div>
+                <div>
+                    <button class="step-button inactive" id="button2" onclick="goToStep(2)">2</button>
+                    <p class="step-label">Customer Details</p>
+                </div>
+                <div>
+                    <button class="step-button inactive" id="button3" onclick="goToStep(3)">3</button>
+                    <p class="step-label">Review</p>
+                </div>
+            </div> 
+
+            <!-- Step 1: Service Requirements -->
+            <div class="form-step active" id="step1">
+                <h2>Service Requirements</h2>
+                <form id="formStep1" action="service">
+                    <label for="service">Service:</label>
+                    <select id="service" required>
+                        <option value="">Select a service</option>
+                        <option value="service1">Service 1</option>
+                        <option value="service2">Service 2</option>
+                        <option value="service3">Service 3</option>
+                    </select>
+                    <div id="serviceError" class="required-message">*Required</div>
+
+                    <label for="priority">Priority:</label>
+                    <select id="priority" required>
+                        <option value="">Select a priority</option>
+                        <option value="High">High</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Low">Low</option>
+                    </select>
+                    <div id="priorityError" class="required-message">*Required</div>
+
+                    <label for="type">Type:</label>
+                    <input type="text" id="type" required>
+                    <div id="typeError" class="required-message">*Required</div>
+
+                    <label for="group">Group:</label>
+                    <input type="text" id="group" required>
+                    <div id="groupError" class="required-message">*Required</div>
+
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" required>
+                    <div id="dateError" class="required-message">*Required</div>
+
+                    <label for="problemsummery">Problem Summary:</label>
+                    <textarea id="problemsummery" required></textarea>
+                    <div id="problemsummeryError" class="required-message">*Required</div>
+
+                    <label for="operationalstatus">Operational Status:</label>
+                    <input type="text" id="operationalstatus" required>
+                    <div id="operationalstatusError" class="required-message">*Required</div>
+
+                    <label for="owner">Owner:</label>
+                    <input type="text" id="owner">
+                    <div id="ownerError" class="required-message">*Required</div>
+
+                    <div class="form-navigation">
+                        <button onclick="nextStep(1)" type="button">Next</button>
+                    </div>
+                </form>
+            </div>
+        
+            <!-- Step 2: Customer Details -->
+            <div class="form-step" id="step2">
+                <h2>Customer Details</h2>
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <div id="nameError" class="required-message">*Required</div>
+
+                <label for="customertype">Customer Type:</label>
+                <input type="text" id="customertype" required>
+                <div id="customertypeError" class="required-message">*Required</div>
+
+                <label for="contactnumber">Contact Number:</label>
+                <input type="text" id="contactnumber" required>
+                <div id="contactnumberError" class="required-message">*Required</div>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <div id="emailError" class="required-message">*Required</div>
+
+                <div class="form-navigation">
+                    <button onclick="previousStep(2)" type="button">Previous</button>
+                    <button onclick="nextStep(2)" type="button">Next</button>
+                </div>
+            </div>
+
+            <!-- Step 3: Review -->
+            <div class="form-step" id="step3">
+                <h2>Review Your Details</h2>
+                <p>Please review the details you have entered.</p>
+                <div class="form-navigation">
+                    <button onclick="previousStep(3)" type="button">Previous</button>
+                    <button type="submit" onclick="submitForm()">Submit</button>
+                </div>
+            </div>
+            </div>
+        </div>
+         
+    </div>
+
+    <div class="popup" id="popup">Your details have been submitted successfully!</div>
+
+    <script src="assets/js/script2.js"></script>
+</body>
+</html>

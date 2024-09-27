@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service request</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style1.css">
+</head>
+<body>
+    <div class="header">
+        <div class="leftheader">
+            <h2 style="color:black">Call Center</h2>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- section  -->
+     <div class="middle1">
+
+        <div class="leftmid1">
+            <a href="index.html">Dashboard</a>
+            <a href="service.html">Source</a>
+        </div>
+   
+    <div class = "content">
+            <h2>Service Requests</h2>
+            <p>Manage Service Requests</p>
+              
+            <div class = "box">
+                 <div class='box-head'>
+                     <h3 style="color: black;">Data List</h3>
+                     <a href="form.html"><button  class = "btn-primary">+  Create</button></a>
+                 </div> 
+                 <div style="display:flex;flex-direction:row;justify-content:space-between; margin:20px 0px">
+                    <div>
+                    
+                    <select id="rowsPerPage">
+                        <option value="5">5</option>
+                        <option value="10" selected>10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                        <option value="25">25</option>
+                    </select>
+                    <label for="rowsPerPage">Rows per page:</label>
+                 </div>
+                   
+                 </div>
+           
+    <table id="dataTable">
+        <thead>
+            <tr >
+                <th>S.No</th>
+                <th>Priority</th>
+                <th>Problem Summary</th>
+                <th>Status</th>
+                <th>Customer</th>
+                <th>Acc. No</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be inserted here by JavaScript -->
+        </tbody>
+    </table>
+    <div id="pagination">
+        <button id="prevBtn">Previous</button>
+        <span id="pageNumbers"></span> <!-- Page numbers will be inserted here -->
+        <button id="lastBtn">Last</button>
+       
+    </div>
+
+    <script src="assets/js/script1.js"></script>
+</body>
+</html>
