@@ -1,0 +1,189 @@
+
+
+
+.header{
+    display:flex ;
+    justify-content: space-between;
+    background-color: grey;
+}
+
+.leftheader{
+    width:300px;
+    /* background-color:aqua ; */
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.leftheader h2{
+    padding: 10px 15px;
+}
+
+
+
+.rightheader{
+    width:300px;
+    /* background-color:rgb(92, 54, 4) ; */
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.searchbox{
+    width:200px;
+    height:40px;
+    border:solid;
+}
+
+.settings{
+    width: 90px;
+    height:40px;
+    border:solid red;
+}
+
+
+
+
+
+/* Middle part  */
+
+.middle{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.leftmid{
+    width:300px;
+    background-color: grey;
+    display:flex;
+    flex-direction: column;
+}
+.leftmid a {
+    text-decoration: none; /* Remove underline */
+    color: black; /* Set text color to black */
+    padding: 10px 15px; /* Add some padding for better click area */
+    border-radius: 5px; /* Round corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+.leftmid a:hover{
+    background-color: #00796b;
+}
+
+
+
+.rightmid{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width:1512px;
+}
+
+/* cards  */
+    .cards{
+        /* width:1400px; */
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .card{
+        /* border: solid red; */
+        width:300px;
+        height:150px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-evenly;
+        align-items:center
+    }
+
+
+
+
+/* graph starts  */
+
+    .graph{
+        /* border: solid red; */
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .areachart , .barchart{
+        border: solid;
+        width:650px;
+        height: 400px;
+    }
+
+
+    .countries{
+        border:solid;
+        margin-left:50px;
+        width:93%;
+
+    }
+
+/* Workflow  */
+
+
+.workflow {
+    border: dashed #00796b;
+    max-width: 800px;
+    margin: auto;
+    padding:10px;
+}
+
+h4 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.timeline {
+    position: relative;
+    padding: 40px 0;
+}
+
+/* Timeline item styling */
+.timeline-item {
+    position: relative;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.timeline-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.content h3 {
+    margin: 0 0 10px;
+    color: #00796b; /* Dark teal for headings */
+    font-size: 18px;
+}
+
+.content p {
+    margin: 0;
+    color: #555;
+}
+
+/* Arrow styles */
+.timeline-item::after {
+    content: '↓'; /* Down arrow character */
+    position: absolute;
+    bottom: -20px; /* Position below the step */
+    left: 50%; /* Center the arrow */
+    transform: translateX(-50%); /* Center alignment */
+    font-size: 24px; /* Arrow size */
+    color: #00796b; /* Arrow color */
+}
+
+.timeline-item:last-child::after {
+    content: ''; /* No arrow for the last step */
+}
+
+
+
+    
